@@ -1,10 +1,10 @@
 const getUserChoice = (userInput) => { 
     if(userInput.toLocaleLowerCase() === 'pedra'){
-        userInput = 'pedra'
+        userInput = 'rock'
     }else if(userInput.toLocaleLowerCase() === 'papel'){
-        userInput = 'papel'
+        userInput = 'paper'
     }else if(userInput.toLocaleLowerCase() === 'tesoura'){
-        userInput = 'tesoura'
+        userInput = 'scissors'
     }else{
         console.log("A opção está inválida!")
     }
@@ -15,22 +15,22 @@ const getUserChoice = (userInput) => {
 function  getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 0) {    
-        return 'pedra';
+        return 'rock';
     } else if (randomNumber === 1) {
-        return 'papel';
+        return 'paper';
     } else {        
-        return 'tesoura';
+        return 'scissors';
     }
 }
 
 function determineWinner (userChoice, computerChoice) {
     if (userChoice == computerChoice) {
         return 'Empate';
-    } else if (userChoice == 'pedra' && computerChoice == 'tesoura') {
+    } else if (userChoice == 'rock' && computerChoice == 'scissors') {
         return 'Você ganhou';
-    }else if (userChoice == 'papel' && computerChoice == 'pedra') {
+    }else if (userChoice == 'paper' && computerChoice == 'rock') {
         return 'Você ganhou';
-    } else if (userChoice == 'tesoura' && computerChoice == 'papel') {
+    } else if (userChoice == 'scissors' && computerChoice == 'paper') {
         return 'Você ganhou';
     }else {
         return 'Você perdeu';
