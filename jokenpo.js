@@ -1,9 +1,9 @@
 const getUserChoice = (userInput) => { 
-    if(userInput.toLocaleLowerCase() === 'pedra'){
+    if(userInput.toLowerCase() === 'pedra'){
         userInput = 'rock'
-    }else if(userInput.toLocaleLowerCase() === 'papel'){
+    }else if(userInput.toLowerCase() === 'papel'){
         userInput = 'paper'
-    }else if(userInput.toLocaleLowerCase() === 'tesoura'){
+    }else if(userInput.toLowerCase() === 'tesoura'){
         userInput = 'scissors'
     }else{
         console.log("A opção está inválida!")
